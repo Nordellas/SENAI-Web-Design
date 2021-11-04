@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --cor-fundo:rgb(38, 156, 89);
+    --cor-hover:rgb(118,180,145);
+    --cor-primaria:rgb(231,241,236);
+}
+
+body{
+    background-image: url(img/legumes.jfif);
+    background-size: cover;       
+    background-attachment: fixed;
+    background-color: aqua;
+}
+
+.dp-menu ul{
+    list-style-type: none;
+    padding: 0;  
+    background-color: var(--cor-fundo);      
+}
+
+.dp-menu ul li{
+    display: inline;
+    position: relative;
+}
+
+.dp-menu ul li a{
+    color: var(--cor-primaria);
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.dp-menu ul li a:hover{
+    background-color: var(--cor-hover); /*muda  de cor quando posiciona em cima*/
+}
+
+.dp-menu ul li:hover ul{
+    display: block;
+}
+
+.dp-menu ul ul{
+    width: 80px;
+    left: 0;
+    display: none;
+    position: absolute;
+}
