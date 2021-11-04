@@ -1,0 +1,52 @@
+body, ul, li, p{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial;  
+}
+
+.topo{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: azure;
+}
+
+.menu{
+    display: flex;
+}
+.menu li{
+    margin-left: 20px;    
+}
+
+.menu li a{
+    padding: 10px;
+}
+
+img{
+    width: 210px;
+    height: 210px;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.flex div{
+    flex:1 1 200px
+}
+
+.divide{
+    margin-bottom: 100px;
+}
