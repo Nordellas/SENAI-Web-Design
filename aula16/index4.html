@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function calcular(){
+            let n1 = prompt("Digite um número")
+            let res = document.getElementById('res')
+            res.innerHTML = `<p> O dobro de ${n1} é <b>${n1*2}</b> e a metade é
+                <b>${n1/2}</b>`
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Trabalhando números</h1>
+    <button onclick="calcular()">Clique para calcular</button>
+    <section id="res">
+        <p>o resultado vem <strong>aqui</strong>!</p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        button{
+            font-size: 25px; padding: 10px;
+            color: pink;
+            background-color: pink;
+        }
+    </style>
+    <script>
+        function clicar(){
+            let nom = prompt('Qual seu nome?');          
+            let not = Number(prompt(`Qual a nota de ${nom}?`));
+            let not2 = Number(prompt(`Qual a segunda nota de ${nom}`));
+            let med = (not + not2)/2;
+            alert(`As notas obtidas são ${not} e ${not2}`);
+            alert(`Dificuldades para calcular as notas de ${nom} <3`);
+            resultado.innerHTML = `<p>A Média Final de <b>${nom}</b> é <b>${med}</b></p>`
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/icone.jfif" type="imagem">
+    <title>Aula zuada</title>
+</head>
+<body>
+    <h1>Fazendo um total de:</h1>
+    <button onclick="clicar()">nada</button>
+    <section id="resultado">
+        <p>O resultado vai aparecer aqui!!!</p>
+    </section>
+</body>
+</html>
