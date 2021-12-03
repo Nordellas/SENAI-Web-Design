@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"><!--Seleciona a cadeia de caracteres 
+    para o padrão de acentuação que usamos no portugues-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando o estilo do site pela DOM</title><!--Nome que 
+    aparece na aba do navegador-->
+    <link rel="stylesheet" href="/css/style.css"><!--Faz o link para o 
+        caminho do arquivo css-->
+</head>
+<body>
+    <div id="manipula">
+        <p>
+            Com base nos argumentos apresentados na aula, é possível 
+            entender que, uma coisa é uma coisa e outra coisa é outra coisa, 
+            admito que não concordo nem discordo, muito pelo contrário
+        </p>
+        <p>
+            Com base nos argumentos apresentados na aula, é possível 
+            entender que, uma coisa é uma coisa e outra coisa é outra coisa, 
+            admito que não concordo nem discordo, muito pelo contrário
+        </p>
+    </div>
+    <br><hr>
+    <h2 class="chamada">Altere o texto acuma clicando nos botões</h2>
+    <div>
+        <!--Botão 1 - tamanho da fonte - modifica o tamanho da fonte para o especificado no script-->
+        <input type="button" value="fonte 20pt" onclick="mudarTamanhoFonte()">
+        <!--Botão 2 - Mid cor da fonte pelo valor especificado no script-->
+        <input type="button" value="FonteCorBranca" onclick="mudarCorFonte()">
+        <!--Botão 3 - Atualize a página para desfazer as mudanças feitas-->
+        <input type="button" value="Atualizar" onclick="location.reload();">
+        <!--Botão - background div - modifica o bg da div para cor especifica no script-->
+        <input type="button" value="bgAmarelo" onclick="bgEspecifico()">
+        <!--Botão 5 - Itálico - modifica a fonte dos paragrafos para itálico-->
+        <input type="button" value="Itálico" onclick="italico()">
+        <!--Botão 6 - Modifica a fonte do parágrafo para negrito-->
+        <input type="button" value="negrito" onclick="negrito()">
+        <!--Botão 7 - Incluir uma borda preta em volta da Div-->
+        <input type="button" value="bordaPreta" onclick="bordaPreta()">
+        <!--Botão 8 - Excluir apenas a borda-->
+        <input type="button" value="excluirBorda" onclick="excluirBorda()">
+        <!--Botão 9 - Esconder a DIV - faz div parar de ser visível-->
+        <input type="button" value="Invisível" onclick="divInvisivel()">
+        <!--Botão 10 - Reaparecer a Div-->
+        <input type="button" value="Voltar" onclick="voltarDIV()">
+        <!--Alterar o texto dentro do h2 através da sua class-->
+        <input type="button" value="alterarTextH2" onclick="alterarTexto()">
+        <input type="button" value="Botão 12" onclick="">
+        <input type="button" value="Botão 13" onclick="">
+        <input type="button" value="Botão 14" onclick="">
+        <input type="button" value="Botão 15" onclick="">
+        <input type="button" value="Botão 16" onclick="">
+        <input type="button" value="Botão 17" onclick="">
+        <input type="button" value="Botão 18" onclick="">
+    </div>
+    <img src="/img/xuxa.jpg" alt="notebook xuxa 1990">
+    <script>//começa aqui a brincadeira com o JS
+
+        //Botão 1 - tamanho fonte função
+        function mudarTamanhoFonte(){
+            document.getElementById("manipula").style.fontSize = "13pt";
+        }
+        function mudarCorFonte(){
+            document.getElementById("manipula").style.color = "white"
+        }
+        function bgEspecifico(){
+            document.getElementById("manipula").style.backgroundColor = "yellow"
+        }
+        function italico(){
+            document.getElementById("manipula").style.fontStyle = "italic"
+        }
+        function negrito(){
+            document.getElementById("manipula").style.fontWeight = "bold"
+        }
+        function bordaPreta(){
+            document.getElementById("manipula").style.border = "2px double black"
+        }
+        function excluirBorda() {
+            document.getElementById("manipula").style.border = "none"
+        }
+        function divInvisivel() {
+            // document.getElementById("manipula").style.visibility ="hidden"
+            document.getElementById("manipula").style.display = "none"
+        }
+        function voltarDIV(){
+            document.getElementById("manipula").style.display = "block"
+            // document.getElementById("manipula").style.visibility = "visible"
+        }
+        function alterarTexto(){
+            document.getElementsByClassName("chamada")[0].innerHTML = "nesse botão sim!!!"
+        }
+
+    </script><!--Termina aqui a brincadeira com o JS-->
+</body>
+</html>
