@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+
+        <meta charset="UTF-8"><!--Seleciona a cadeia de caracteres
+        para o padrão de acentuação que usamos no portugues-->
+        
+        <title>Manipulando o Estilo do Site pela DOM</title><!--
+        Nome que aparece na abinha do navegador.-->
+        
+        <link rel="stylesheet" href="styles.css"><!--Faz o link
+        para o caminho do arquivo css-->
+
+    </head>
+    <body>
+        <div id="manipula">
+            <p>Com base nos argumentos apresentados na aula, é
+                possível entender que, uma coisa é uma coisa e 
+                outra coisa é outra coisa, admito que não concordo
+                nem discordo, muito pelo contrário.
+            </p>
+            <p class="paragrafo">
+                É factível que a Terra é um dos planetas mais 
+                conhecidos do Mundo, mesmo sabendo que a vida
+                é uma sucessão de sucessivos que sucedem 
+                sucessivamente sem cessar.
+                Agora, mais do que nunca, é hora, afinal, 
+                o importante é que importa, pois onde quer que
+                voce esteja, voce sempre estara la.
+            </p>
+        </div> 
+        <br>
+        <hr>
+        <h2 class="chamada">Altere o texto acima clicando nos botões</h2>
+
+        <h2 class="chamada">Segundo H2</h2>
+        <h2 class="chamada">Terceiro H2</h2>
+        <div>
+            <!--Botão 1 - Tamanho Fonte - Modifica o tamanho 
+                da fonte para o especificado no script-->
+            <input type="button" value="Tamanho Fonte" onclick="mudaTamanhoFonte()">
+
+            <!--Botão 2 - Muda cor da Fonte pelo valor especificado no script-->
+            <input type="button" value="Cor Fonte" onclick="mudaCorFonte()">
+
+
+            <!--Botão 3 - Atualize a página para desfazer as mudanças dos outros botões-->
+            <input type="button" value="Atualizar" onclick="location.reload();">
+
+            <!--Botão 4 - Background Div - modifica a cor do background da div para a 
+                cor especificada no script-->
+            <input type="button" value="Background DIV" onclick="mudaBackground()">
+
+            <!--Botão 5 - Itálico - Modifica a fonte dos paragrafos para itálico-->
+            <input type="button" value="Italico" onclick="mudaItalico()">
+
+            <!--Botão 6 - Modifica a fonte dos parágrafos para negrito-->
+            <input type="button" value="Negrito" onclick="mudaNegrito()">
+
+            <!--Botão 7 - Incluir uma borda preta em volta da Div-->
+            <input type="button" value="Incluir Borda" onclick="incluirBorda()">
+
+            <!--Botão 08 - Excluir a borda. -->
+            <input type="button" value="Excluir Borda" onclick="excluirBorda()">
+
+            <!--Botão 09 - Esconder a DIV - Faz div parar de ser visísvel-->
+            <input type="button" value="Esconde DIV" onclick="escondeDiv()">
+
+            <!--Botão 10 - Reaparecer a DIV - Faz a div ser visível novamente-->
+            <input type="button" value="Reaparece DIV" onclick="reapareceDiv()">
+
+            <!--Botão 11 - Alterar o texto dentro do h2 através de sua class-->
+            <input type="button" value="Não" onclick="nao()">
+
+
+            <!--Botão 12 - Background P - Muda a cor apenas do paragrafo de classe 
+                "paragrafo" utilizando classe(sem usar ID)-->
+            <input type="button" value="background P" onclick="backgroundP()">
+
+            <!--Botao 13 - Mudar a cor apenas de um botão pelo nome da tag-->
+            <input type="button" value="Cor Botão" onclick="mudaCorBotao()">
+
+            <!--Botão 14 - Mudar a cor de todos os botoes pelo nome da tag-->
+            <input type="button" value="Mudar Cor Todos" onclick="mudarCorTodosBotoes()">
+
+            <!--Botão 15 - Conta Botão - Conta quantos botões existem na página
+            e exibe na div-->
+            <input type="button" value="Contar Botôes" onclick="contarBotoes()">
+
+            <!--Botão 16 - Censura - Substitui o segundo paragrafo por ***
+            utilizar querySelector s/ ID, apenas com class-->
+            <input type="button" value="Censura" onclick="censura()">
+
+            <!--Botão 17 - Fundo - Trocar a cor do background da pagina com 
+            querySelector sem usar id ou class-->
+            <input type="button" value="Fundo" onclick="fundo()">
+
+            <!--Botão 18 - Trocar Imagem utilizando querySelector-->
+            <input type="button" value="Trocar Imagem" onclick="imagem()">
+        </div>
+
+        <img id="image"src="xuxa.jpg">
+
+        <script>//começa aqui a brincadeira com o JavaScript
+
+            //Botão 1 - Tamanho Fonte - Função
+            function mudaTamanhoFonte(){
+                document.getElementById("manipula").style.fontSize = "20pt";
+                //document.querySelector("#manipula").style.fontSize = "20pt";
+            }
+
+            //Botão 2 - Cor da Fonte - Função
+            function mudaCorFonte(){
+                document.getElementById("manipula").style.color = "white";
+            }
+
+            //Botão 4 - Background - Função
+            function mudaBackground(){
+                document.getElementById("manipula").style.backgroundColor = "black";
+            }
+
+            //Botao 5 - Itálico - Função
+            function mudaItalico(){
+                document.getElementById("manipula").style.fontStyle = "italic";
+            }
+
+            //Botão 6 - Negrito - Função
+            function mudaNegrito(){
+                document.getElementById("manipula").style.fontWeight = "bold";
+            }
+
+            //Botão 7 - Incluir Borda - Funçao
+            function incluirBorda(){
+                document.getElementById("manipula").style.border = "2px solid black";
+            }
+
+            //Botão 8 - Excluir Borda - Função
+            function excluirBorda(){
+                document.getElementById("manipula").style.border = "none";
+            }
+
+            //Botão 9 - Esconder a DIV - função
+            function escondeDiv(){
+                //document.getElementById("manipula").style.visibility = "hidden";
+                document.getElementById("manipula").style.display = "none";
+            }
+
+            //Botão 10 - Reaparecer a DIV - função
+            function reapareceDiv(){
+                document.getElementById("manipula").style.display = "block";
+                //document.getElementById("manipula").style.visibility = "visible";
+            }
+
+            //Botão 11 - Não - Função
+            function nao(){
+                document.getElementsByClassName("chamada")[2].innerHTML = "Nesse botão não!!";
+            }
+
+            //botao 12 - Background P - Função
+            function backgroundP(){
+                document.getElementsByClassName('paragrafo')[0].style.backgroundColor = "red";
+            }
+
+            //botão 13 - Cor Botão - Função
+            function mudaCorBotao(){
+                document.getElementsByTagName("input")[17].style.backgroundColor = "lightblue";
+            }
+
+            //botao 14 - Cor dos Botões - Função
+            function mudarCorTodosBotoes(){
+                let total = document.getElementsByTagName("input");
+                let cont;
+                for (cont = 0; cont < total.length; cont++){
+                    total[cont].style.backgroundColor = "lightblue";
+                }
+                
+
+
+                /*
+                let cont;
+                for (cont = 0; cont <= 17; cont++){
+                    document.getElementsByTagName("input")[cont].style.backgroundColor = "lightblue";
+                }
+                */
+            }
+
+                /*
+                document.getElementsByTagName("input")[0].style.backgroundColor = "lightblue";
+                document.getElementsByTagName("input")[1].style.backgroundColor = "lightblue";
+                document.getElementsByTagName("input")[2].style.backgroundColor = "lightblue";
+                document.getElementsByTagName("input")[3].style.backgroundColor = "lightblue";
+                document.getElementsByTagName("input")[4].style.backgroundColor = "lightblue";
+                document.getElementsByTagName("input")[5].style.backgroundColor = "lightblue";
+                document.getElementsByTagName("input")[6].style.backgroundColor = "lightblue";
+                document.getElementsByTagName("input")[7].style.backgroundColor = "lightblue";
+                document.getElementsByTagName("input")[8].style.backgroundColor = "lightblue";
+                document.getElementsByTagName("input")[9].style.backgroundColor = "lightblue";
+                document.getElementsByTagName("input")[10].style.backgroundColor = "lightblue";
+                document.getElementsByTagName("input")[11].style.backgroundColor = "lightblue";
+                document.getElementsByTagName("input")[12].style.backgroundColor = "lightblue";
+                document.getElementsByTagName("input")[13].style.backgroundColor = "lightblue";
+                document.getElementsByTagName("input")[14].style.backgroundColor = "lightblue";
+                document.getElementsByTagName("input")[15].style.backgroundColor = "lightblue";
+                document.getElementsByTagName("input")[16].style.backgroundColor = "lightblue";
+                document.getElementsByTagName("input")[17].style.backgroundColor = "lightblue";
+                */
+            
+            //Botão 15 - Conta Botão - Função
+            function contarBotoes(){
+                let total = document.getElementsByTagName("input");
+                document.getElementById("manipula").innerHTML = total.length;
+            }
+
+            //Botão 16 - Censura - Função
+            function censura(){
+                document.querySelector(".paragrafo").innerHTML = "***";
+            }
+
+            //Botão 17 - Fundo - Função
+            function fundo(){
+                document.querySelector("body").style.backgroundColor = "lightblue";
+            }
+
+            //Botao 18 - Imagem - Função
+            function imagem(){
+                //document.querySelector("img").src = "alien.jpg";
+                //document.querySelector("#image").src = "alien.jpg";
+                let imagem = document.querySelector("#image");
+                imagem.setAttribute('src', 'alien.jpg');
+            }
+
+
+        </script><!--Termina aqui a brincadeira com o JavaScript-->
+
+    </body>
+</html>
